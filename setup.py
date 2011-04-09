@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = '1.0.1'
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.txt')).read()
@@ -12,7 +12,7 @@ setup(name='django-workflows',
       long_description=README,      
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-          'Development Status :: 4 - Beta',
+          'Development Status :: 5 - Production/Stable',
           'Environment :: Web Environment',
           'Framework :: Django',
           'License :: OSI Approved :: BSD License',
@@ -30,7 +30,7 @@ setup(name='django-workflows',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'django-permissions',
+          'django-permissions >=1.0,<1.1',
       ],
       entry_points="""
       # -*- Entry points: -*-

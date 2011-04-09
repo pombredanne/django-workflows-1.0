@@ -3,11 +3,6 @@ What is it?
 
 django-workflows provides a generic workflow engine for Django.
 
-Documentation
-=============
-
-For more documentation please visit: http://packages.python.org/django-workflows/
-
 Code
 ====
 
@@ -21,6 +16,12 @@ a look at the CMS `LFC <http://pypi.python.org/pypi/django-lfc>`_
 
 Changes
 =======
+
+1.0.1 (2010-04-09)
+------------------
+
+* Updated dependencies
+* Updated Development Status to "5 - Production/Stable"
 
 1.0 (2010-08-24)
 ----------------
