@@ -17,8 +17,17 @@ a look at the CMS `LFC <http://pypi.python.org/pypi/django-lfc>`_
 Changes
 =======
 
+1.0.2 (2010-04-30)
+------------------
+
+Bugfix release
+
+* Bugfix: Removed mutuable parameters; issue #11 of django-permissions
+
 1.0.1 (2010-04-09)
 ------------------
+
+Bugfix release
 
 * Updated dependencies
 * Updated Development Status to "5 - Production/Stable"
