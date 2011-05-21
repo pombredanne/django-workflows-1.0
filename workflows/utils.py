@@ -67,6 +67,10 @@ def remove_workflow_from_model(ctype):
     # instances which have passed workflow.
     workflow = get_workflow_for_model(ctype)
     for obj in get_objects_for_workflow(workflow):
+        # Only take care of the given ctype.
+        obj_ctype = ContentType.objects.get_for_model(obj)
+        if ctype != obj_ctype:
+            continue
         try:
             ctype = ContentType.objects.get_for_model(obj)
             sor = StateObjectRelation.objects.get(content_id=obj.id, content_type=ctype)
