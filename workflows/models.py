@@ -231,7 +231,7 @@ class StateObjectRelation(models.Model):
         The state of content. This must be a State instance.
     """
     content_type = models.ForeignKey(ContentType, verbose_name=_(u"Content type"), related_name="state_object", blank=True, null=True)
-    content_id = models.PositiveIntegerField(_(u"Content id"), blank=True, null=True)
+    content_id = models.CharField(_(u"Content id"), max_length=36, blank=True, null=True)
     content = generic.GenericForeignKey(ct_field="content_type", fk_field="content_id")
     state = models.ForeignKey(State, verbose_name = _(u"State"))
 
@@ -258,7 +258,7 @@ class WorkflowObjectRelation(models.Model):
         instance.
     """
     content_type = models.ForeignKey(ContentType, verbose_name=_(u"Content type"), related_name="workflow_object", blank=True, null=True)
-    content_id = models.PositiveIntegerField(_(u"Content id"), blank=True, null=True)
+    content_id = models.CharField(_(u"Content id"), max_length=36, blank=True, null=True)
     content = generic.GenericForeignKey(ct_field="content_type", fk_field="content_id")
     workflow = models.ForeignKey(Workflow, verbose_name=_(u"Workflow"), related_name="wors")
 
